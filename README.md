@@ -71,11 +71,11 @@ Nos fijalos en la columna _Protocol_ e identificamos cual es protocolo utilizado
 ### Reto 2 (100 pts)
 ➸¿Cuál es la dirección IP del host al que se le hizo ping dos veces?
 
-Usamos el filtro por protocolo ICMP (Internet Control Message Protocol)
+Usamos el filtro **icmp** e identificamos  _ping request_ , podemos hacerlo mas especifico usando el filtro **icmp.type == 8**
 ![image](https://user-images.githubusercontent.com/46491988/142676275-73258f57-79c6-4e88-ba4d-6666da3de393.png)
 
 
->➟Flag:
+>➟Flag:8.8.4.4
 
 ### Reto 3 (100 pts)
 ➸¿Cuántos paquetes de respuesta a la consulta DNS fueron capturados?
