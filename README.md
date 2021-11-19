@@ -28,11 +28,19 @@ Explorando en el paquete HTPP podemos visualar el host visutado por la IP.
 >➟Flag: www.facebook.com
 
 ### Reto 3 (100 pts)
-➸
+➸¿Cuántos paquetes HTTPS hay en la captura?
+
+Usamos el filtro **tls** para visualizar todos los paquetes con HTTPS
+![image](https://user-images.githubusercontent.com/46491988/142674327-46dc4add-6400-43f1-a0ea-1056d6363e42.png)
+
+En la parte inferior podemos ver la cantidad de paquetes HTTPS
+>➟Flag: 57
 
 ### Reto 4 (200 pts)
-➸
+➸¿Qué versión de TLS se utilizó en la mayoría de los paquetes HTTPS?
 
+Con el filtro anterior, exploramos en el paquete y podemos identificar la version TLS
+>➟Flag: 1.2
 
 # PCAP02
 ### Reto 0 (50 pts)
@@ -40,17 +48,35 @@ Explorando en el paquete HTPP podemos visualar el host visutado por la IP.
 >➟Flag: PCAP-Exercise-02.pcapng
 
 ### Reto 1 (100 pts)
-➸
+➸¿Qué protocolo se utilizó en el puerto 3942?
+
+Usamos el filtro por puerto **tcp.port==3942** y **udp.port==3942**. Solo obtenemos resultado con el filtro por UDP
+![image](https://user-images.githubusercontent.com/46491988/142675608-03e3ea29-58df-4b01-96e3-0ef8dc85badf.png)
+
+Nos fijalos en la columna _Protocol_ e identificamos cual es protocolo utilizado: SSDP (Simple Service Discovery Protocol)
+
+>➟Flag:SSDP
 
 ### Reto 2 (100 pts)
-➸
+➸¿Cuál es la dirección IP del host al que se le hizo ping dos veces?
+
+Usamos el filtro por protocolo ICMP (Internet Control Message Protocol)
+![image](https://user-images.githubusercontent.com/46491988/142676275-73258f57-79c6-4e88-ba4d-6666da3de393.png)
+
+
+>➟Flag:
 
 ### Reto 3 (100 pts)
-➸
+➸¿Cuántos paquetes de respuesta a la consulta DNS fueron capturados?
+
+
+>➟Flag:
 
 ### Reto 4 (200 pts)
-➸
->No anwers
+➸¿Cuál es la dirección IP del host que envió el mayor número de bytes?
+
+
+>➟Flag:No anwers
 
 
 # PCAP03
@@ -59,16 +85,43 @@ Explorando en el paquete HTPP podemos visualar el host visutado por la IP.
 >➟Flag: PCAP-Exercise-03.pcapng
 
 ### Reto 1 (100 pts)
-➸
+➸¿Cuál es la contraseña de WebAdmin?
+
+Buscamos alguna tranferencia o inicio de sesion en los paquetes capturados. 
+
+Para descubrir algun archivo en los paqutes realizamos los iguiente :
+
+_Archivo>Extraer objetos> HTPP_ 
+![image](https://user-images.githubusercontent.com/46491988/142676701-da80f530-3abe-47f4-b444-b1e7f11415ce.png)
+
+Esto nos muestra los siguientes resultados y nos centramos en el docuemnto _password.txt_ , tenemos la opcion de guardar el archivo o obtener una vista previa del contenido:
+![image](https://user-images.githubusercontent.com/46491988/142676528-9d57beac-4a55-471d-bbca-eacb1abf402a.png)
+
+El contenido del _password.txt_ nos muestra la clave de WebAdmin 
+
+>➟Flag: sbt123
+
 
 ### Reto 2 (100 pts)
-➸
+➸¿Cuál es el número de versión del servidor FTP del atacante?
+
+Buscamos una comunicacion por FTP en los paquetes capturados con el filtro *ftp* y obtenemos lo siguiente:
+![image](https://user-images.githubusercontent.com/46491988/142677800-aff43852-6963-45b2-a316-1feab79ffc41.png)
+
+Dentro de los paquetes vemos el modulo **_pyftpdlib_** utilizado para crear un servidor FTP con Phyton, esto nos indica que el atacante implemento un servidor FTP con Phyton y obtenemos la version explorando en el apartado _File Tranfers Protocol_
+
+>➟Flag: 1.5.5
+
 
 ### Reto 3 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 4 (100 pts)
 ➸
+>➟Flag:
+
 
 
 # PCAP04
@@ -78,18 +131,28 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 
 ### Reto 1 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 2 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 3 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 4 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 5 (100 pts)
 ➸
+>➟Flag:
+
 
 # PCAP05
 ## Reto 0 (50 pts)
@@ -98,14 +161,20 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 
 ### Reto 1 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 2 (100 pts)
 ➸
+>➟Flag:
+
 
 ### Reto 3 (100 pts)
 ➸ 
->No anwers
+>➟Flag:No anwers
 
 ### Reto 4 (100 pts)
 ➸
+>➟Flag:
+
 
