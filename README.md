@@ -81,7 +81,7 @@ Usamos el filtro por protocolo ICMP (Internet Control Message Protocol)
 ➸¿Cuántos paquetes de respuesta a la consulta DNS fueron capturados?
 
 
->➟Flag:
+>➟Flag:99
 
 ### Reto 4 (200 pts)
 ➸¿Cuál es la dirección IP del host que envió el mayor número de bytes?
@@ -132,7 +132,9 @@ Dentro de los paquetes vemos el modulo **_pyftpdlib_** utilizado para crear un s
 
 
 ### Reto 4 (100 pts)
-➸
+➸¿Cuál es el nombre de un archivo confidencial que se encuentra en el host de Windows?
+
+
 >➟Flag:
 
 
@@ -143,27 +145,36 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 >➟Flag: PCAP-Exercise-04.pcapng
 
 ### Reto 1 (100 pts)
-➸
->➟Flag:
+➸¿Con cuántos hosts diferentes se comunicó la 10.0.6.187 en el rango 10.0.6.200-253?
+
+![image](https://user-images.githubusercontent.com/46491988/142682925-be0d8426-3280-42fe-b2b0-9fb6c3ed90a8.png)
+
+>➟Flag:7
 
 
 ### Reto 2 (100 pts)
-➸
->➟Flag:
+➸¿Cuál fue la primera dirección IP con la que 10.0.6.187 inició la comunicación?
+>➟Flag: 10.0.6.1
 
 
 ### Reto 3 (100 pts)
-➸
+➸¿Cuál es el nombre de la estación de trabajo del controlador de dominio?
+
+
 >➟Flag:
 
 
 ### Reto 4 (100 pts)
-➸
+➸¿Cuál es la dirección MAC del controlador de dominio?
+
+
 >➟Flag:
 
 
 ### Reto 5 (100 pts)
-➸
+➸¿Cuántos puertos UDP diferentes se utilizaron en la comunicación?
+
+
 >➟Flag:
 
 
