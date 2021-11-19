@@ -74,19 +74,21 @@ Nos fijalos en la columna _Protocol_ e identificamos cual es protocolo utilizado
 Usamos el filtro **icmp** e identificamos  _ping request_ , podemos hacerlo mas especifico usando el filtro **icmp.type == 8**
 ![image](https://user-images.githubusercontent.com/46491988/142676275-73258f57-79c6-4e88-ba4d-6666da3de393.png)
 
+Identificamos que el host destino al que se le hizo ping 2 veces.
 
 >➟Flag:8.8.4.4
 
 ### Reto 3 (100 pts)
 ➸¿Cuántos paquetes de respuesta a la consulta DNS fueron capturados?
 
+_No process_
 
 >➟Flag:99
 
 ### Reto 4 (200 pts)
 ➸¿Cuál es la dirección IP del host que envió el mayor número de bytes?
 
-
+_No process_
 >➟Flag:No anwers
 
 
@@ -147,13 +149,19 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 ### Reto 1 (100 pts)
 ➸¿Con cuántos hosts diferentes se comunicó la 10.0.6.187 en el rango 10.0.6.200-253?
 
+Vamos a ir a la pestaña de _Estadisticas>Conversaciones>IPv4_ ordenamos ascendetemente y visualizamos la comunicacion de _Address A -> Address B_ del IP 10.0.6.187 y contamos los IP
+
 ![image](https://user-images.githubusercontent.com/46491988/142682925-be0d8426-3280-42fe-b2b0-9fb6c3ed90a8.png)
 
->➟Flag:7
+>➟Flag:8
 
 
 ### Reto 2 (100 pts)
 ➸¿Cuál fue la primera dirección IP con la que 10.0.6.187 inició la comunicación?
+
+Usamos el filtro **ip.addr == 10.0.6.187** e identificar la comunicación del host, ordenamos ascendentemente para obtener la repuesta.
+![image](https://user-images.githubusercontent.com/46491988/142687309-7892eeba-e148-48f2-b5f1-8773bce6a05a.png)
+
 >➟Flag: 10.0.6.1
 
 
