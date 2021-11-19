@@ -129,8 +129,13 @@ Dentro de los paquetes vemos el modulo **_pyftpdlib_** utilizado para crear un s
 ### Reto 3 (100 pts)
 ➸¿Qué puerto se utilizó para acceder al host Windows víctima?
 
+Con el filtro anterior podemos revisar el apartado TCP y conocer el puerto de conexion.
 
->➟Flag:
+![image](https://user-images.githubusercontent.com/46491988/142697053-4623f332-5441-4764-b189-dde101964f71.png)
+
+Destination Port: 49183
+
+>➟Flag:49183
 
 
 ### Reto 4 (100 pts)
@@ -169,14 +174,14 @@ Usamos el filtro **ip.addr == 10.0.6.187** e identificar la comunicación del ho
 ### Reto 3 (100 pts)
 ➸¿Cuál es el nombre de la estación de trabajo del controlador de dominio?
 
-revisnado los paquetes capturadpos podemos notar que hace referencia a un active directory administrador por Kerberos y el IP corresponde al 10.0.6.187 que previamente hemos analizado.
+revisnado los paquetes capturadpos podemos notar que hace referencia a un active directory administrado por Kerberos 
 
-Usamos el filtro **smb && ntlmssp**  haciendo referencia a protocolos que se utilizan para kerberos esto solo nos muesra 15 paquetes.
+Usamos el filtro **smb && ntlmssp**  haciendo referencia a protocolos que se utilizan para kerberos esto solo nos muestra 15 paquetes.
 
 
 ![image](https://user-images.githubusercontent.com/46491988/142694050-c02160be-14e4-49c2-ad6f-75e01966cdb5.png)
 
-Revisando cada paquete podemos identificar que el paquete 3524 es un equipo con un Windows Server 2012 R2 y econtramos la respuesta explorando en el apartado SMB 
+Revisando cada paquete podemos identificar que el paquete 3524 es un equipo con un Windows Server 2012 R2 y encontramos la respuesta explorando en el apartado SMB 
 
 >➟Flag:212-C6S-DC1
 
@@ -184,6 +189,9 @@ Revisando cada paquete podemos identificar que el paquete 3524 es un equipo con 
 ### Reto 4 (100 pts)
 ➸¿Cuál es la dirección MAC del controlador de dominio?
 
+Previamente hemos identificado el nombre del controlador de dominio, por lo que solo necesitamos buscar en el apartado de Ethernet II para identificar la MAC del Host
+
+![image](https://user-images.githubusercontent.com/46491988/142694432-8bddf0fe-202d-43d1-b3bc-d454c159c789.png)
 
 >➟Flag:06:90:56:51:62:12
 
@@ -197,7 +205,7 @@ Vamos a ir a la pestaña de _Estadisticas>Conversaciones>UDP_ y contamos los pue
 
 Identificamos los puertos _53, 137, 161, 1124, 3289, 8610, 8612_
 
->➟Flag: 7
+>➟Flag: 7********************
 
 
 # PCAP05
@@ -206,13 +214,27 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 >➟Flag: PCAP-Exercise-05.pcap
 
 ### Reto 1 (100 pts)
-➸
->➟Flag:
+➸¿Cuál es el nombre de dominio del servidor de nombres autorizado de Atwola que tiene la dirección IP 199.7.69.1?
+
+Vamos a la pestaña _Estadisticas>Direcciones resultas_ , luego filtramos por el IP 199.7.69.1
+
+![image](https://user-images.githubusercontent.com/46491988/142695053-ab4f16db-d9c5-406a-8a52-83021da338b5.png)
+
+EL filtro nos muestra el nombre de dominio.
+
+>➟Flag:pdns4.ultradns.org
 
 
 ### Reto 2 (100 pts)
-➸
->➟Flag:
+➸Cuando el host de la dirección IP 192.168.1.157 utiliza el servicio de nombres NetBIOS (NBNS) para anunciarse en la red, ¿qué nombre de host emite?
+
+Usamos el filtro **ip.addr == 192.168.1.157 && nbns** esto nos muestra 24 paquetes.
+
+![image](https://user-images.githubusercontent.com/46491988/142696385-972b780c-42e0-4c38-88ae-86687db6816a.png)
+
+Revisando el apartado NetBIOS encontramos 2 nombres SANS y HERVIBORE que se muestra como un Workstation. 
+
+>➟Flag:SANS
 
 
 ### Reto 3 (100 pts)
@@ -220,7 +242,10 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 >➟Flag:No anwers
 
 ### Reto 4 (100 pts)
-➸
->➟Flag:
+➸¿Cuántos paquetes del protocolo de transferencia de hipertexto (HTTP) se encuentran en la captura de paquetes?
+
+Usamos el filtro **http** y nos muestra 4 paquetes.
+
+>➟Flag:4
 
 
