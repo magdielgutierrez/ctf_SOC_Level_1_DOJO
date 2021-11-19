@@ -181,7 +181,7 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 # PCAP05
 ## Reto 0 (50 pts)
 Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque el nombre de la archivo incluyendo la extensión.
->➟Flag: PCAP-Exercise-05.pcapng
+>➟Flag: PCAP-Exercise-05.pcap
 
 ### Reto 1 (100 pts)
 ➸
