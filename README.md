@@ -89,7 +89,7 @@ Usamos el filtro por protocolo ICMP (Internet Control Message Protocol)
 
 Buscamos alguna tranferencia o inicio de sesion en los paquetes capturados. 
 
-Para descubrir algun archivo en los paqutes realizamos los iguiente :
+Para descubrir algun archivo en los paquetes realizamos los siguiente :
 
 _Archivo>Extraer objetos> HTPP_ 
 ![image](https://user-images.githubusercontent.com/46491988/142676701-da80f530-3abe-47f4-b444-b1e7f11415ce.png)
@@ -114,7 +114,9 @@ Dentro de los paquetes vemos el modulo **_pyftpdlib_** utilizado para crear un s
 
 
 ### Reto 3 (100 pts)
-➸
+➸¿Qué puerto se utilizó para acceder al host Windows víctima?
+
+
 >➟Flag:
 
 
