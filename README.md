@@ -3,8 +3,8 @@ Respuestas al CTF de análisis de trafico, certificación como Analista de SOC 1
 
 ## ./challenges
 
-- [PCAP01 (550pts)](#PCAP01)
-- [PCAP02](#PCAP2)
+- [PCtttAP01](#PCAP01)
+- [PCAP02](#PCAP02)
 - [PCAP03](#PCAP03)
 
 
