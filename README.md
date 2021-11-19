@@ -169,8 +169,16 @@ Usamos el filtro **ip.addr == 10.0.6.187** e identificar la comunicación del ho
 ### Reto 3 (100 pts)
 ➸¿Cuál es el nombre de la estación de trabajo del controlador de dominio?
 
+revisnado los paquetes capturadpos podemos notar que hace referencia a un active directory administrador por Kerberos y el IP corresponde al 10.0.6.187 que previamente hemos analizado.
 
->➟Flag:
+Usamos el filtro **smb && ntlmssp**  haciendo referencia a protocolos que se utilizan para kerberos esto solo nos muesra 15 paquetes.
+
+
+![image](https://user-images.githubusercontent.com/46491988/142694050-c02160be-14e4-49c2-ad6f-75e01966cdb5.png)
+
+Revisando cada paquete podemos identificar que el paquete 3524 es un equipo con un Windows Server 2012 R2 y econtramos la respuesta explorando en el apartado SMB 
+
+>➟Flag:212-C6S-DC1
 
 
 ### Reto 4 (100 pts)
