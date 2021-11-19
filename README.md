@@ -13,8 +13,11 @@ Respuestas al CTF de análisis de trafico con Wireshark. Certificación como Ana
 *********************************
 
 -  [PCAP0d1](#PCAP01)
-   - [PCAP01](#PCAP01)
-     - Segundo elemento de la lista anidado
+   - [Reto 0](#Reto-0-(50 pts))
+   - [Reto 0](#Reto-0-(50 pts))
+   - [Reto 0](#Reto-0-(50 pts))
+   - [Reto 3](#Reto-3-(100 pts))
+    
 
 # PCAP01
 ### Reto 0 (50 pts)
