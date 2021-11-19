@@ -41,17 +41,17 @@ Explorando en el paquete HTPP podemos visualar el host visutado por la IP.
 ### Reto 3 (100 pts)
 ➸¿Cuántos paquetes HTTPS hay en la captura?
 
-Usamos el filtro **tls** para visualizar todos los paquetes con HTTPS
-![image](https://user-images.githubusercontent.com/46491988/142674327-46dc4add-6400-43f1-a0ea-1056d6363e42.png)
+Usamos el filtro **tcp.port==443** para visualizar todos los paquetes con HTTPS
+![image](https://user-images.githubusercontent.com/46491988/142686083-2ebd655f-4a5b-41b9-ac07-4cba57b53b45.png)
 
 En la parte inferior podemos ver la cantidad de paquetes HTTPS
->➟Flag: 57
+>➟Flag: 144
 
 ### Reto 4 (200 pts)
 ➸¿Qué versión de TLS se utilizó en la mayoría de los paquetes HTTPS?
 
 Con el filtro anterior, exploramos en el paquete y podemos identificar la version TLS
->➟Flag: 1.2
+>➟Flag: TLSv1.2
 
 # PCAP02
 ### Reto 0 (50 pts)
