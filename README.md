@@ -149,10 +149,11 @@ Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque 
 ### Reto 1 (100 pts)
 ➸¿Con cuántos hosts diferentes se comunicó la 10.0.6.187 en el rango 10.0.6.200-253?
 
-Vamos a ir a la pestaña de _Estadisticas>Conversaciones>IPv4_ ordenamos ascendetemente y visualizamos la comunicacion de _Address A -> Address B_ del IP 10.0.6.187 y contamos los IP
+Vamos a ir a la pestaña de _Estadisticas>Conversaciones>IPv4_ ordenamos ascendetemente y visualizamos la comunicacion de _Address A -> Address B_ del IP 10.0.6.187 y contamos los IP en el rango indicado.
 
 ![image](https://user-images.githubusercontent.com/46491988/142682925-be0d8426-3280-42fe-b2b0-9fb6c3ed90a8.png)
 
+Finalmente obtenemos el flag.
 >➟Flag:8
 
 
@@ -176,14 +177,19 @@ Usamos el filtro **ip.addr == 10.0.6.187** e identificar la comunicación del ho
 ➸¿Cuál es la dirección MAC del controlador de dominio?
 
 
->➟Flag:
+>➟Flag:06:90:56:51:62:12
 
 
 ### Reto 5 (100 pts)
 ➸¿Cuántos puertos UDP diferentes se utilizaron en la comunicación?
 
+Vamos a ir a la pestaña de _Estadisticas>Conversaciones>UDP_ y contamos los puertos que se repiten en la comunicación.
 
->➟Flag:
+![image](https://user-images.githubusercontent.com/46491988/142688262-bfee3bee-6e9a-4fa8-8b9c-dbd7f2e62b7f.png)
+
+Identificamos los puertos _53, 137, 161, 1124, 3289, 8610, 8612_
+
+>➟Flag: 7
 
 
 # PCAP05
