@@ -1,12 +1,11 @@
 # ctf_SOC_Level_1_DOJO
 Respuestas al CTF de análisis de trafico, certificación como Analista de SOC 1
 
-[PCAP01](#insertar-hn).
-## Tabla de contenido
+## ./challenges
 
-- [PCAP01](#pcaop01).
-- [PCAP02](#PCAP01).
-- [PCAP03](#PCAP01).
+- [PCAP01 (550pts)](#PCAP01)
+- [PCAP02](#PCAP2)
+- [PCAP03](#PCAP03)
 
 
 
