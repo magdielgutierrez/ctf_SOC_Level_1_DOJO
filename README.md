@@ -3,7 +3,7 @@ Respuestas al CTF de análisis de trafico con Wireshark. Certificación como Ana
 
 ## ./challenges
 
-- [PCAP01](#PCAP01)
+- [PCAP01](#PCAP01_ejercicios)
 - [PCAP02](#PCAP02)
 - [PCAP03](#PCAP03)
 - [PCAP04](#PCAP04)
@@ -12,7 +12,7 @@ Respuestas al CTF de análisis de trafico con Wireshark. Certificación como Ana
 
     
 
-# PCAP01
+# PCAP01 ejercicios
 ### Reto 0 (50 pts)
 ➸Favor descargar el PCAP e Importar a Wireshark , para completar el reto coloque el nombre de la archivo incluyendo la extensión.
 >➟Flag: PCAP-Exercise-01.pcapng
